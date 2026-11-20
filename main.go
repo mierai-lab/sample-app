@@ -56,7 +56,7 @@ func newMux(version, fault string, m *metrics) *http.ServeMux {
 			http.Error(w, "name too long", http.StatusBadRequest)
 			return
 		}
-		greeting := "hello, "
+		greeting := "hello from mierai-lab, "
 		if r.URL.Query().Get("lang") == "ja" {
 			greeting = "こんにちは、"
 		}

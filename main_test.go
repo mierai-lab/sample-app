@@ -15,7 +15,7 @@ func TestMux(t *testing.T) {
 		wantCode       int
 	}{
 		{"/healthz", "ok", 200},
-		{"/hello", `"message":"hello, world"`, 200},
+		{"/hello", `"message":"hello from mierai-lab, world"`, 200},
 		{"/hello?name=gitops", `"message":"hello, gitops"`, 200},
 		{"/hello?name=gitops&lang=ja", `"message":"こんにちは、gitops"`, 200},
 		{"/hello?name=" + strings.Repeat("x", 65), "too long", 400},
